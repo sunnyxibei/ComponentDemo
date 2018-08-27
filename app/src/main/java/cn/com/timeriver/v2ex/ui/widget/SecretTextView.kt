@@ -1,4 +1,4 @@
-package cn.com.timeriver.v2ex.widget
+package cn.com.timeriver.v2ex.ui.widget
 
 import android.animation.ObjectAnimator
 import android.animation.ValueAnimator
