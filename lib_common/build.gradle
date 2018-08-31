@@ -1,9 +1,9 @@
 apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion 28
-
-
 
     defaultConfig {
         minSdkVersion 23
@@ -21,17 +21,21 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation deps.kotlin.stdlib
-    implementation deps.support.appcompat
-    implementation deps.support.constraint
-    implementation deps.other.arouter_api
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    api deps.kotlin.stdlib
+    api deps.support.v4
+    api deps.support.v13
+    api deps.support.design
+    api deps.support.cardview
+    api deps.support.percent
+    api deps.support.appcompat
+    api deps.support.constraint
+    api deps.support.recyclerview
+    api deps.other.arouter_api
 
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 }

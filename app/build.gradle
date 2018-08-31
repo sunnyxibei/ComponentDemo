@@ -1,22 +1,16 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion deps.build.target_sdk
+    compileSdkVersion deps.build.target
     defaultConfig {
         applicationId "cn.com.timeriver.v2ex"
-        minSdkVersion deps.build.min_sdk
-        targetSdkVersion deps.build.target_sdk
+        minSdkVersion deps.build.min
+        targetSdkVersion deps.build.target
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-        kapt {
-            arguments {
-                arg("AROUTER_MODULE_NAME", project.getName())
-            }
-        }
     }
     buildTypes {
         release {
@@ -28,8 +22,8 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation deps.support.multidex
     implementation project(':lib_common')
-    kapt 'com.alibaba:arouter-compiler:1.2.1'
     if (!isModule.toBoolean()) {
         implementation project(':module_main')
         implementation project(':module_girls')

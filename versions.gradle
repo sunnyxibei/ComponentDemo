@@ -85,13 +85,13 @@ ext {
                     'android_gradle_plugin': "com.android.tools.build:gradle:$versions.android_gradle_plugin",
             ],
             'kotlin'  : [
-                    'stdlib': "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.kotlin",
+                    'stdlib': "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$versions.kotlin",
                     'plugin': "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlin",
                     'test'  : "org.jetbrains.kotlin:kotlin-test-junit:$versions.kotlin"
             ],
             "build"   : [
-                    'min_sdk'   : 23,
-                    'target_sdk': 28
+                    'min'   : 23,
+                    'target': 28
             ]
     ]
 }

@@ -4,6 +4,7 @@ import android.app.Application
 import cn.com.timeriver.v2ex.BuildConfig
 import com.alibaba.android.arouter.launcher.ARouter
 
+//App Module 作为壳工程，提供一些全局的初始化
 class App : Application() {
 
     override fun onCreate() {
