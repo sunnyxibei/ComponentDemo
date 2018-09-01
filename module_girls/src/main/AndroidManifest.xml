@@ -1,2 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="cn.com.timeriver.girls" />
+    package="cn.com.timeriver.girls">
+
+    <application>
+
+
+        <activity android:name=".main.GirlsActivity" />
+    </application>
+</manifest>
