@@ -1,11 +1,11 @@
 package cn.com.timeriver.v2ex.base
 
-import android.app.Application
+import cn.com.timeriver.common.base.App
 import cn.com.timeriver.v2ex.BuildConfig
 import com.alibaba.android.arouter.launcher.ARouter
 
-//App Module 作为壳工程，提供一些全局的初始化
-class App : Application() {
+//ShellApp Module 作为壳工程，提供一些全局的初始化
+class ShellApp : App() {
 
     override fun onCreate() {
         super.onCreate()

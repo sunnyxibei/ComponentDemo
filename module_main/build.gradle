@@ -27,9 +27,13 @@ android {
     sourceSets {
         main {
             if (isModule.toBoolean()) {
-                manifest.srcFile("src/main/module/AndroidManifest.xml")//组件化调试时的Manifest
+                manifest.srcFile("src/module/AndroidManifest.xml")//组件化调试时的Manifest
+                java {
+                    srcDir 'src/module/java' // 指定源码目录
+                }
             } else {
                 manifest.srcFile("src/main/AndroidManifest.xml")//集成测试时的Manifest
+
             }
         }
     }
